@@ -26,7 +26,7 @@ Este proyecto analiza la degradación de suelos agrícolas en zonas seleccionada
 1. Clona el repositorio:
 
 ```bash
-git clone https://github.com/tu_usuario/proyectoGSTI.git
+git clone https://github.com/RommelPa/proyectoGSTI.git
 cd proyectoGSTI
 ```
 ---
@@ -56,22 +56,5 @@ earthengine authenticate
 5. Crea un archivo .env con ID de proyecto de Google Cloud
 
 ```ini
-EE_PROJECT_ID=nombre-de-tu-proyecto
-```
-
----
-
-## 📁 Estructura del Proyecto
-
-```bash
-proyectoGSTI/
-│
-├── .env                      # Proyecto GCP (no subir)
-├── requirements.txt
-├── README.md
-├── .gitignore
-│
-├── scripts/                  # Scripts modulares
-│
-├── notebooks/
+EE_PROJECT_ID=nombre-de-proyecto
 ```
