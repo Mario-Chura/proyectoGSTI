@@ -7,3 +7,6 @@ numpy
 scipy
 matplotlib
 python-dotenv
+ipywidgets
+ipyleaflet
+jupyter-leaflet
