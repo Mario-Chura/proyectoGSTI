@@ -1,0 +1,27 @@
+# === PYTHON ===
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# === ENTORNO VIRTUAL ===
+venv/
+
+# === VARIABLES DE ENTORNO ===
+.env
+
+# === JUPYTER NOTEBOOKS ===
+.ipynb_checkpoints/
+
+# === VS CODE ===
+.vscode/
+
+# === ARCHIVOS TEMPORALES ===
+.DS_Store
+*.log
+*.tmp
+
+# === EXPORTACIONES GEE ===
+GEE_Exports/
+
+
