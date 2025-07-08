@@ -10,3 +10,4 @@ python-dotenv
 ipywidgets
 ipyleaflet
 jupyter-leaflet
+ipykernel
