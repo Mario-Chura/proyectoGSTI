@@ -28,7 +28,6 @@ def tendencia_ndmi(zona):
 
     coleccion_anual = ee.ImageCollection.fromImages(años.map(anualizar))
 
-    # Aplicar regresión lineal
     tendencia = coleccion_anual.select(['año', 'NDMI']) \
         .reduce(ee.Reducer.linearFit()) \
         .select('scale') \

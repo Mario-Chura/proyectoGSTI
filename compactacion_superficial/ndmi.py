@@ -16,6 +16,14 @@ def contar_imagenes_ndmi(zona, inicio, fin):
                  .filter(ee.Filter.lt('CLOUDY_PIXEL_PERCENTAGE', 20)))
     return coleccion.size().getInfo()
 
+def ndmi_por_anio(zona, anio):
+    coleccion = (ee.ImageCollection('COPERNICUS/S2_SR_HARMONIZED')
+                 .filterBounds(zona)
+                 .filterDate(f'{anio}-01-01', f'{anio}-12-31')
+                 .filter(ee.Filter.lt('CLOUDY_PIXEL_PERCENTAGE', 20))
+                 .map(lambda img: img.normalizedDifference(['B8', 'B11']).rename('NDMI')))
+    return coleccion.median().clip(zona)
+
 def comparar_ndmi(zona, fecha_base_ini, fecha_base_fin, fecha_actual_ini, fecha_actual_fin):
     def ndmi_periodo(fecha_ini, fecha_fin):
         coleccion = (ee.ImageCollection('COPERNICUS/S2_SR_HARMONIZED')

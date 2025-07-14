@@ -7,7 +7,6 @@ def calcular_lst(zona, fecha_ini='2023-05-01', fecha_fin='2023-10-31'):
                  .filter(ee.Filter.lt('CLOUD_COVER', 20)))
 
     def extraer_lst(img):
-        # Conversión escala térmica: (DN * multiplicador + aditivo)
         lst = img.select('ST_B10').multiply(0.00341802).add(149.0).subtract(273.15)
         return lst.rename('LST').copyProperties(img, img.propertyNames())
 
